@@ -31,10 +31,11 @@ Probably having some nice alternating row color, having the leftest column stay 
 
 ## Diff table (full table [HERE](https://react-native-community.github.io/rn-diff-purge/))
 
-| From->To | D                                                                                                 | I | F | F | S |   | = | = |   | F | U | N |
-| -------- | ------------------------------------------------------------------------------------------------- | - | - | - | - | - | - | - | - | - | - | - |
-| 48.0.0   | X                                                                                                 | - |   |   |   |   |   |   |   |   |   |   |
-| 47.0.0   | [->48.0.0](https://github.com/keith-kurak/expo-diff-purge/compare/release/47.0.0..release/48.0.0) | X |   |   |   |   |   |   |   |   |   |   |
+| From->To | D                                                                                                 | I                                                                                                 | F | F | S |   | = | = |   | F | U | N |
+| -------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | - | - | - | - | - | - | - | - | - | - |
+| 49.0.0   | X                                                                                                 | -                                                                                                 | - |   |   |   |   |   |   |   |   |   |
+| 48.0.0   | [->49.0.0](https://github.com/keith-kurak/expo-diff-purge/compare/release/48.0.0..release/49.0.0) | X                                                                                                 | - |   |   |   |   |   |   |   |   |   |
+| 47.0.0   | [->49.0.0](https://github.com/keith-kurak/expo-diff-purge/compare/release/47.0.0..release/49.0.0) | [->48.0.0](https://github.com/keith-kurak/expo-diff-purge/compare/release/47.0.0..release/48.0.0) | X |   |   |   |   |   |   |   |   |   |
 
 ## To see the full table containing all releases click [HERE](https://react-native-community.github.io/rn-diff-purge/)
 
