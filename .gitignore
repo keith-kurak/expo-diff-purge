@@ -1,13 +1,11 @@
-# project
-RnDiffApp/
-
 # macOS
 .DS_Store
 
-# node
-node_modules/
+# lock files
+ExpoDiffApp/yarn.lock
+ExpoDiffApp/package-lock.json
+ExpoDiffApp/Gemfile.lock
+ExpoDiffApp/ios/Podfile.lock
 
-# git worktree
-wt-app
-wt-diffs
-yarn-error.log
+# node modules
+node_modules/
