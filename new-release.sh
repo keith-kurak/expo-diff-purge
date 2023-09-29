@@ -72,8 +72,8 @@ function generateNewReleaseBranch () {
     git add "$AppName"
     git commit -m "Release $newRelease"
     git push origin --delete "$branchName" || git push origin "$branchName"
-    git tag "version/$newRelease" # @react-native-community/cli needs this
-    git push --set-upstream origin "$branchName" --tags
+    #git tag "version/$newRelease" # @react-native-community/cli needs this
+    git push --set-upstream origin "$branchName"
 
     # go back to master
     cd ..
@@ -86,10 +86,10 @@ function addReleaseToList () {
 
     if command -v tac; then
         #   take each line ->dedup->    sort them              -> reverse them -> save them
-        cat "$ReleasesFile" | uniq | tac           > tmpfile
+        cat "$ReleasesFile" | uniq | sort | tac           > tmpfile
     else
         #   take each line ->dedup->    sort them              -> reverse them -> save them
-        cat "$ReleasesFile" | uniq | tail -r       > tmpfile
+        cat "$ReleasesFile" | uniq | sort | tail -r       > tmpfile
     fi
 
     mv tmpfile "$ReleasesFile"
@@ -166,18 +166,18 @@ guardMissingArg $*
 sdkVersion=$1
 newRelease=$2
 
-guardExisting
+#guardExisting
 
 prepare
 generateNewReleaseBranch
 addReleaseToList
 generateDiffs
 
-generateTable
-generateReadme
+#generateTable
+#generateReadme
 
-generateBigTable
-generateGHPages
+#generateBigTable
+#generateGHPages
 
 cleanUp
 pushMaster
